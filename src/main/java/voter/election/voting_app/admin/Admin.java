@@ -14,9 +14,9 @@ import voter.election.voting_app.app_user.AppUser;
 @Builder
 
 public class Admin {
-    @jakarta.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private long id;
     @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     private AppUser userDetails;
     private String employeeId;

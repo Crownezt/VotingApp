@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import voter.election.voting_app.candidate.Candidate;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,9 +18,10 @@ public class Office {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String name;
-    private String duration;
     @OneToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    private Candidate candidate;
+    private Office name;
+    private int duration;
+    @OneToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    private List<Candidate> candidates;
 
 }

@@ -10,18 +10,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import voter.election.voting_app.app_user.AppUser;
 import voter.election.voting_app.candidate.Candidate;
+import voter.election.voting_app.candidate.CandidateRepository;
 import voter.election.voting_app.party.Party;
+import voter.election.voting_app.party.PartyRepository;
 import voter.election.voting_app.voter.dtos.RegisterResponse;
 import voter.election.voting_app.voter.dtos.RegisterVoterRequest;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
 @AllArgsConstructor
 public class VoterServicesImpl implements VoterServices {
-    private VoterRepository voterRepository;
+    private final VoterRepository voterRepository;
+    private final CandidateRepository candidateRepository;
+    private final PartyRepository partyRepository;
 
     @Override
     public RegisterResponse register(RegisterVoterRequest request) {
@@ -42,13 +47,18 @@ public class VoterServicesImpl implements VoterServices {
         return getRegisterResponse(savedVoter);
     }
 
-    private Voter getVoterById(long id) {
+    public Voter getVoterById(long id) {
         return voterRepository.findById(id).orElseThrow(() ->
                 new VoterException(String.format("Voter with  ID %d is not found", id)));
     }
 
     @Override
-    public Voter updateProfile(long id, JsonPatch updatePayLoad) {
+    public List<Voter> getVoter() {
+        return voterRepository.findAll();
+    }
+
+    @Override
+    public Voter updateVoter(long id, JsonPatch updatePayLoad) {
         ObjectMapper mapper = new ObjectMapper();
         Voter foundVoter = getVoterById(id);
         JsonNode node = mapper.convertValue(foundVoter, JsonNode.class);
@@ -56,29 +66,30 @@ public class VoterServicesImpl implements VoterServices {
         try{
             JsonNode updateNode = updatePayLoad.apply(node);
 
-            Voter updatedVoter = mapper.convertValue(updateNode, Voter.class);
-            voterRepository.save(updatedVoter);
-            return updatedVoter;
+            var updatedVoter = mapper.convertValue(updateNode, Voter.class);
+            return voterRepository.save(updatedVoter);
+//            return updatedVoter;
         }
         catch (JsonPatchException e) {
+            log.error(e.getMessage());
             throw new RuntimeException();
         }
-    }
-
-    @Override
-    public Voter checkStatus(long id) {
-        return getVoterById(id);
     }
 
 
     @Override
     public List<Candidate> viewCandidates() {
-        return null;
+        return candidateRepository.findAll();
+    }
+
+    @Override
+    public Optional<Candidate> viewCandidateById(long id){
+        return candidateRepository.findById(id);
     }
 
     @Override
     public List<Party> viewParties() {
-        return null;
+        return partyRepository.findAll();
     }
 
     private RegisterResponse getRegisterResponse(Voter savedVoter) {

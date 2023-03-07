@@ -1,4 +1,6 @@
 package voter.election.voting_app.candidate;
 
-public class CandidateRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CandidateRepository extends JpaRepository<Candidate, Long> {
 }

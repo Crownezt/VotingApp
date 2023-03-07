@@ -1,4 +1,6 @@
 package voter.election.voting_app.office;
 
-public class OfficeRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OfficeRepository extends JpaRepository<Office, Long> {
 }

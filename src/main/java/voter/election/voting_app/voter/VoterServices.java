@@ -7,12 +7,16 @@ import voter.election.voting_app.voter.dtos.RegisterResponse;
 import voter.election.voting_app.voter.dtos.RegisterVoterRequest;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface VoterServices {
     RegisterResponse register(RegisterVoterRequest request);
-    Voter updateProfile(long id, JsonPatch updatePayLoad);
-    Voter checkStatus(long id);
+    Voter getVoterById(long id);
+    List<Voter> getVoter();
+    Voter updateVoter(long id, JsonPatch updatePayLoad);
     List<Candidate> viewCandidates();
+    Optional<Candidate> viewCandidateById(long id);
+
     List<Party> viewParties();
 
 

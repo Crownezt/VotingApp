@@ -1,6 +1,5 @@
-package voter.election.voting_app.voter.dtos;
+package voter.election.voting_app.candidate.dtos;
 
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

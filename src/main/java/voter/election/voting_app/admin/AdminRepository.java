@@ -1,4 +1,6 @@
 package voter.election.voting_app.admin;
 
-public class AdminRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AdminRepository extends JpaRepository<Admin, Long> {
 }
