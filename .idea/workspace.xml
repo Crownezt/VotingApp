@@ -5,59 +5,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb8ab0d3-e50f-416c-9e67-f09d298acad3" name="Changes" comment="voting application">
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/VotingApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/dtos/RegisterAdminRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/dtos/RegisterResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/dtos/RegisterCandidateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/dtos/RegisterResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeServicesImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/dtos/CastVoteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/dtos/response/VoteCountResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/dtos/response/VoteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/secret.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/voter/election/voting_app/VotingApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/voter/election/voting_app/voter/VoterServicesImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/cloud_service/CloudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/cloud_service/CloudinaryCloudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/config/app/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/config/mail/MailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/CastVoteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/EmailNotificationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/Recipient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/ResetPasswordRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/VerifyUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/response/PartyResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/response/SignUpResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/email/EmailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/email/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/GenericException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/LoginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/notification/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/notification/MailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/AppUserServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/VoteServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/AdminServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/AppUserServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/OfficeServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/PartyServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/VoteServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/Candidate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/Office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/Voter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/Voter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/dtos/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/dtos/RegisterResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/dtos/RegisterVoterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/dtos/RegisterVoterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/models/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/AdminException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/repositories/AdminRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/AdminServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/AdminServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/dtos/RegisterAdminRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/RegisterAdminRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/admin/dtos/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/response/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/models/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/repositories/AppUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUserServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/app_user/AppUserServicesImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/models/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/CandidateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/CandidateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/repositories/CandidateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/CandidateServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/CandidateServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/CandidateServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/dtos/RegisterCandidateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/RegisterCandidateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/candidate/dtos/RegisterResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/election/Election.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/models/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/OfficeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/repositories/OfficeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/OfficeServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/OfficeServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/office/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/response/OfficeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/models/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/PartyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/repositories/PartyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/party/PartyServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/PartyServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/models/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/repositories/VoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/VoteServicesImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/dtos/CastVoteRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/dtos/response/VoteCountResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/response/VoteCountResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/vote/dtos/response/VoteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/response/VoteResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/Voter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/models/Voter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/VoterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/exception/VoterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/data/repositories/VoterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/VoterServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/VoterServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/VoterServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/dtos/RegisterResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/voter/dtos/RegisterVoterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/RegisterVoterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/voter/election/voting_app/voter/VoterServicesImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/voter/election/voting_app/services/VoterServicesImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +106,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.0.4/spring-web-6.0.4.jar!/org/springframework/http/HttpEntity.class" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -85,41 +118,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Downloads/signUpSignInApp/voting_app/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;011d7a196cc8c6c1b8dc2592ef371592&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/user/Downloads/signUpSignInApp/voting_app/src/main/java/voter/election/voting_app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "011d7a196cc8c6c1b8dc2592ef371592"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="voter.election.voting_app.dtos" />
+      <recent name="voter.election.voting_app.dtos.register" />
+      <recent name="voter.election.voting_app.dtos.response" />
       <recent name="voter.election.voting_app.vote.dtos" />
       <recent name="voter.election.voting_app.party" />
-      <recent name="voter.election.voting_app.party.dtos" />
-      <recent name="voter.election.voting_app.office" />
-      <recent name="voter.election.voting_app.candidate.dtos" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\resources" />
-      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\party" />
-      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\candidate" />
-      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\admin" />
-      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\Voter" />
+      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app" />
+      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\services\implementations" />
+      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\data\repositories" />
+      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\data\models" />
+      <recent name="C:\Users\user\Downloads\signUpSignInApp\voting_app\src\main\java\voter\election\voting_app\services" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -129,6 +168,8 @@
       <recent name="voter.election.voting_app.voter" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="voter.election.voting_app.config.mail" />
+      <recent name="voter.election.voting_app.dtos.request" />
       <recent name="voter.election.voting_app.candidate.dtos" />
     </key>
   </component>
@@ -137,12 +178,12 @@
       <module name="voting_app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="voter.election.voting_app.voter.*" />
+          <option name="PATTERN" value="voter.election.voting_app.data.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="voter.election.voting_app.voter" />
-      <option name="MAIN_CLASS_NAME" value="voter.election.voting_app.voter.VoterServicesImplTest" />
+      <option name="MAIN_CLASS_NAME" value="voter.election.voting_app.services.VoterServicesImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,12 +193,12 @@
       <module name="voting_app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="voter.election.voting_app.voter.*" />
+          <option name="PATTERN" value="voter.election.voting_app.data.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="voter.election.voting_app.voter" />
-      <option name="MAIN_CLASS_NAME" value="voter.election.voting_app.voter.VoterServicesImplTest" />
+      <option name="MAIN_CLASS_NAME" value="voter.election.voting_app.services.VoterServicesImplTest" />
       <option name="METHOD_NAME" value="registerTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -230,7 +271,20 @@
       <workItem from="1677231055451" duration="11654000" />
       <workItem from="1677248308737" duration="13301000" />
       <workItem from="1677672913558" duration="28785000" />
-      <workItem from="1677841709750" duration="52902000" />
+      <workItem from="1677841709750" duration="60145000" />
+      <workItem from="1678226270643" duration="60569000" />
+      <workItem from="1678799079630" duration="1783000" />
+      <workItem from="1679052958378" duration="678000" />
+      <workItem from="1679177186091" duration="98000" />
+      <workItem from="1679306925843" duration="3958000" />
+      <workItem from="1679627263905" duration="619000" />
+      <workItem from="1679663255612" duration="1307000" />
+      <workItem from="1681319758981" duration="9890000" />
+      <workItem from="1681417931284" duration="3622000" />
+      <workItem from="1681459338262" duration="669000" />
+      <workItem from="1681726181037" duration="18159000" />
+      <workItem from="1681809319066" duration="16219000" />
+      <workItem from="1681828219888" duration="44304000" />
     </task>
     <task id="LOCAL-00001" summary="voting application">
       <created>1677679673730</created>
