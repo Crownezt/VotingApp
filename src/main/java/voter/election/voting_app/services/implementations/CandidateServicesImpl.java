@@ -33,7 +33,7 @@ public class CandidateServicesImpl implements CandidateServices {
     @Override
     public RegisterResponse register(RegisterCandidateRequest request) {
         Optional<Candidate> existingEmail = Optional.ofNullable(candidateRepository.findByUserDetails_Email(request.getEmail()));
-        Voter savedVoter;
+
         if (existingEmail.isPresent()) {
             throw new VoterException("Email already exist");
         }

@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb8ab0d3-e50f-416c-9e67-f09d298acad3" name="Changes" comment="voting application">
-      <change afterPath="$PROJECT_DIR$/readme.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/CandidateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/CandidateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/VoterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/controllers/VoterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/RegisterAdminRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/dtos/request/InviteAdminRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/AdminServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/AdminServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/CandidateServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/CandidateServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/VoterServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/implementations/VoterServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/AdminServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/voter/election/voting_app/services/interfaces/AdminServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +210,7 @@
       <workItem from="1681459338262" duration="669000" />
       <workItem from="1681726181037" duration="18159000" />
       <workItem from="1681809319066" duration="16219000" />
-      <workItem from="1681828219888" duration="46952000" />
+      <workItem from="1681828219888" duration="55225000" />
     </task>
     <task id="LOCAL-00001" summary="voting application">
       <created>1677679673730</created>

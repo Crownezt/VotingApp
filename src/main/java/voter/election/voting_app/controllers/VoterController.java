@@ -79,7 +79,7 @@ public class VoterController {
     @PatchMapping(value = "{voterId}", consumes = "application/json-patch+json")
      public ResponseEntity<?> updateVoter(@PathVariable long voterId, @RequestBody JsonPatch updatePayload) {
         try {
-            var response = voterServices.updateVoter(voterId,updatePayload);
+            Voter response = voterServices.updateVoter(voterId,updatePayload);
             return ResponseEntity.status(HttpStatus.OK).body(response);
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());

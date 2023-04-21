@@ -64,6 +64,7 @@ public class VoterServicesImpl implements VoterServices {
                 voter.setAge(request.getAge());
             } else throw new VoterException("Age must be above 18");
             voter.setGender(request.getGender());
+            voter.setId(appUser.getId());
 
             String imageUrl = cloudService.upload(request.getImage());
             appUser.setImageUrl(imageUrl);
@@ -84,7 +85,7 @@ public class VoterServicesImpl implements VoterServices {
             emailNotificationRequest.setSubject("Welcome!");
             emailNotificationRequest.setTextContent(String.format(
                     "We appreciate your registration. " +
-                            "\n please copy the copy token: %s", jwt));
+                            "\n please copy the copy token: %s" + jwt));
             String email = mailService.sendHtmlMail(emailNotificationRequest);
 
             if (email == null) {
@@ -99,7 +100,7 @@ public class VoterServicesImpl implements VoterServices {
                 .build();
     }
 
-    public String hashPassword(String password) {
+    private String hashPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
     public Voter getVoterById(long id) {
